@@ -48,45 +48,68 @@ while($x = mysqli_fetch_array($hasil)){
 ?>
 <div class="content-wrapper container">
 
-<div class="page-content">
-    <section class="row">
+    <div class="page-content">
+        <section class="row">
 
-    <div class="col-lg-12 col-md-12">
+            <div class="col-lg-12 col-md-12">
                 <div class="card">
                     <div class="card-content">
                         <div class="card-body">
-<!----------------- OPSI TEXT ------------------------------->
-                                <div class="tab-pane fade show active" id="list-TEXT" role="tabpanel" aria-labelledby="list-TEXT-list">
-                                    <h4 class="card-title">IMPORT DATA <?php echo $ModuleName;?></h4>
-                                <ul class="pagination pagination-primary  justify-content-center">                      
-                                <div class="buttons justify-content-center">    
-                                    <div class="modal-success me-1 mb-1 d-inline-block"><br>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#success">
-                                    PETUNJUK PENGGUNAAN
-                                    </button>
-                                    <!--Success theme Modal -->
-                                    <div class="modal fade text-left" id="success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel110" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-full" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header bg-success">
-                                                    <h5 class="modal-title white" id="myModalLabel110"><b>PETUNJUK INPUTAN DATA <?php echo $ModuleName;?>.</b></h5>
-                                                </div>
-                                                <div class="modal-body">           
-                                                <!-- ISO MODAL -->
-                                                    <div class="tab-pane fade show active" id="list-monday" role="tabpanel" aria-labelledby="list-monday-list">
-                                                    <section class="section">
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <div class="card">
-                                                                    <div class="card-header">
-                                                    <table class='table table-striped' id='table1' border='1'>
-                                    <tr>
-                                        <th>Nama Mahasiswa</th><th>Nim</th><th>Kode Prodi</th><th>Tanggal Daftar</th><th>Periode Masuk</th>
-                                        <th>Jenis Masuk</th><th>JKelamin</th><th>Tempat Lahir</th><th>Tanggal Lahir</th><th>Agama</th>
-                                        <th>NIK</th><th>Negara</th><th>Kelurahan</th><th>ID Wilayah</th><th>Nama Ibu</th><th>Biaya Kuliah</th>
-                                    </tr>
-                                    <tr>
-<td>Nama Mahasiswa</td><td><pre>Nomor Induk <br>Mahasiswa</td><td><pre>Kode ID Prodi <br><a href='?module=feedprodi' target="_blank" ><b>LIHAT DISINI</b></a></td><td><pre>Tanggal Daftar<br> <br>Format yyyy-mm-dd</td>
+                            <!----------------- OPSI TEXT ------------------------------->
+                            <div class="tab-pane fade show active" id="list-TEXT" role="tabpanel"
+                                aria-labelledby="list-TEXT-list">
+                                <h4 class="card-title">IMPORT DATA <?php echo $ModuleName;?></h4>
+                                <ul class="pagination pagination-primary  justify-content-center">
+                                    <div class="buttons justify-content-center">
+                                        <div class="modal-success me-1 mb-1 d-inline-block"><br>
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#success">
+                                                PETUNJUK PENGGUNAAN
+                                            </button>
+                                            <!--Success theme Modal -->
+                                            <div class="modal fade text-left" id="success" tabindex="-1" role="dialog"
+                                                aria-labelledby="myModalLabel110" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-full"
+                                                    role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header bg-success">
+                                                            <h5 class="modal-title white" id="myModalLabel110">
+                                                                <b>PETUNJUK INPUTAN DATA <?php echo $ModuleName;?>.</b>
+                                                            </h5>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <!-- ISO MODAL -->
+                                                            <div class="tab-pane fade show active" id="list-monday"
+                                                                role="tabpanel" aria-labelledby="list-monday-list">
+                                                                <section class="section">
+                                                                    <div class="row">
+                                                                        <div class="col">
+                                                                            <div class="card">
+                                                                                <div class="card-header">
+                                                                                    <table class='table table-striped'
+                                                                                        id='table1' border='1'>
+                                                                                        <tr>
+                                                                                            <th>Nama Mahasiswa</th>
+                                                                                            <th>Nim</th>
+                                                                                            <th>Kode Prodi</th>
+                                                                                            <th>Tanggal Daftar</th>
+                                                                                            <th>Periode Masuk</th>
+                                                                                            <th>Jenis Masuk</th>
+                                                                                            <th>JKelamin</th>
+                                                                                            <th>Tempat Lahir</th>
+                                                                                            <th>Tanggal Lahir</th>
+                                                                                            <th>Agama</th>
+                                                                                            <th>NIK</th>
+                                                                                            <th>Negara</th>
+                                                                                            <th>Kelurahan</th>
+                                                                                            <th>ID Wilayah</th>
+                                                                                            <th>Nama Ibu</th>
+                                                                                            <th>Biaya Kuliah</th>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>Nama Mahasiswa</td>
+                                                                                            <td>
+                                                                                                <pre>Nomor Induk <br>Mahasiswa</td><td><pre>Kode ID Prodi <br><a href='?module=feedprodi' target="_blank" ><b>LIHAT DISINI</b></a></td><td><pre>Tanggal Daftar<br> <br>Format yyyy-mm-dd</td>
 <td><pre>Periode Masuk <br>contoh : 20191, 
 20192, 20201, dst</td>
 <td>Jenis Masuk<br><pre>1 : Peserta didik baru
@@ -114,35 +137,43 @@ ABDUL KHANIP	1903018024	193c58aa-1c37-4e04-a7c8-c37e81f2c21f	2019-09-02	20191	1	
 EKA MASKANAH	1903018025	193c58aa-1c37-4e04-a7c8-c37e81f2c21f	2019-09-02	20191	1	P	Pati	1981-12-13	1	3318165312810006	ID	Sekarjalak	000000	Siti Aminah	5000000
 
 </pre></code>
-                                    </td></tr>
-                                                    </table>
-                                                    keterangan :<br> 
-                                                                        <code>Copy data di Excel, lalu pastekan di kolom bawah; pemisah antar kolom menggunakan Tab(default ketika copy dari excel); 1 baris = 1 record<br>Untuk Mempercepat Proses, Silahkan Lakukan GETDATA MAHASISWA</code>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                    keterangan :<br>
+                                                                                    <code>Copy data di Excel, lalu pastekan di kolom bawah; pemisah antar kolom menggunakan Tab(default ketika copy dari excel); 1 baris = 1 record<br>Untuk Mempercepat Proses, Silahkan Lakukan GETDATA MAHASISWA</code>
 
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <a href="assets/mahasiswa.xlsx"><button
+                                                                                    type="submit"
+                                                                                    class="btn btn-primary ml-1">
+                                                                                    <span
+                                                                                        class="d-none d-sm-block">Download
+                                                                                        Excel</span>
+                                                                                </button></a>
+                                                                            <a href="#"><button type="submit"
+                                                                                    class="btn btn-success ml-1"
+                                                                                    data-bs-dismiss="modal">
+                                                                                    <span
+                                                                                        class="d-none d-sm-block">lANJUTKAN</span>
+                                                                                </button></a>
+                                                                        </div>
                                                                     </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <a href="assets/mahasiswa.xlsx"><button type="submit" class="btn btn-primary ml-1" >
-                                                                <span class="d-none d-sm-block">Download Excel</span>
-                                                                </button></a>
-                                                                <a href="#"><button type="submit" class="btn btn-success ml-1" data-bs-dismiss="modal">
-                                                                <span class="d-none d-sm-block">lANJUTKAN</span>
-                                                                </button></a>
+                                                                </section>
                                                             </div>
                                                         </div>
-                                                    </section>  
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
                                 </ul>
-                                                <!-- ISO MODAL -->
+                                <!-- ISO MODAL -->
 
-                                                    Untuk Cara Penggunaan, Silahkan Klik Petunjuk Penggunaan
-                                                  <?php
+                                Untuk Cara Penggunaan, Silahkan Klik Petunjuk Penggunaan
+                                <?php
 if ($jmldata > 0){
     if ($aksi !='tambah'){ 
         echo '<div class="alert alert-light-danger color-danger">Masih ada Data Existing Belum di Sync Ke Feeder Sejumlah '.$jmldata.' Record (Belum Sync : '.$belum.', Berhasil : '.$berhasil.', Gagal : '.$gagal.'). 
@@ -171,33 +202,37 @@ if ($jmldata > 0){
                         </div>
                                             </div>';
     }else{?>
-                                                    <!-- KONDISI KETIKA PENAMBAHAN DATA -->
-                                                    <form  method="POST" action="<?php echo $link1; ?>" >
-                                                        <div class="form-group with-title mb-3">
-                                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="input"></textarea>
-                                                            <label>Paste Data Excel di Kolom bawah</label>
-                                                        </div>
-                                                        <button class="btn btn-outline-secondary" type="submit" >submit</button>
-                                                        <br><br>
-                                                    </form>          
-                                    </div></div>
-    <?php
+                                <!-- KONDISI KETIKA PENAMBAHAN DATA -->
+                                <form method="POST" action="<?php echo $link1; ?>">
+                                    <div class="form-group with-title mb-3">
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"
+                                            name="input"></textarea>
+                                        <label>Paste Data Excel di Kolom bawah</label>
+                                    </div>
+                                    <button class="btn btn-outline-secondary" type="submit">submit</button>
+                                    <br><br>
+                                </form>
+                            </div>
+                        </div>
+                        <?php
     }
                                         }
                                         else{
                                                   ?>
-                                                    <!-- KONDISI KETIKA KOSONG -->
-                                                    <form  method="POST" action="<?php echo $link1; ?>" >
-                                                        <div class="form-group with-title mb-3">
-                                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="input"></textarea>
-                                                            <label>Paste Data Excel di Kolom bawah</label>
-                                                        </div>
-                                                        <button class="btn btn-outline-secondary" type="submit" >Submit</button>
-                                                        <br><br>
-                                                    </form>          
-                                    </div></div>
-                                            
-<?php
+                        <!-- KONDISI KETIKA KOSONG -->
+                        <form method="POST" action="<?php echo $link1; ?>">
+                            <div class="form-group with-title mb-3">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"
+                                    name="input"></textarea>
+                                <label>Paste Data Excel di Kolom bawah</label>
+                            </div>
+                            <button class="btn btn-outline-secondary" type="submit">Submit</button>
+                            <br><br>
+                        </form>
+                    </div>
+                </div>
+
+                <?php
   }//PENUTUP JIKA ADA DATA YANG BELUM DI SYNC
   if (isset($_POST['input']))
   {
@@ -209,7 +244,7 @@ if ($jmldata > 0){
     <table class='table table-striped' id='table1' border='1'><tr>
     <th>No</th><th>Nim</th><th>Nama Mahasiswa</th><th>Program Studi</th><th>tgl daftar</th><th>semester</th>
     <th>Masuk</th><th>JK</th><th>Tempat Lahir</th><th>tgl Lahir</th><th>Agama</th><th>NIK</th>
-    <th>ID Negara</th><th>Kelurahan</th><th>ID Wilayah</th><th>Nama Ibu</th><th>Biaya Kuliah</th>
+    <th>ID Negara</th><th>Kelurahan</th><th>ID Wilayah</th><th>Nama Ibu</th><th>Biaya Kuliah</th><th>NISN</th><th>Jalur Daftar</th>
     </tr>";
     foreach ($line as $baris){
         $baris = explode("\t",$baris);
@@ -232,6 +267,8 @@ $kelurahan = $baris[12];
 $idwilayah = $baris[13];
 $ibu = $baris[14];
 $biaya = $baris[15];
+$nisn = $baris[16];
+$id_jalur_daftar = $baris[17];
 
 // CEK PROGRAM STUDI
 $query = "SELECT * FROM getprodi WHERE id_prodi ='$id_prodi'";
@@ -267,17 +304,19 @@ $prodi_tampil = "<pre>".$x['nama_program_studi'];
             echo "</pre></td><td><pre>".$baris[13];
             echo "</pre></td><td><pre>".$baris[14];
             echo "</pre></td><td><pre>".$baris[15];
+            echo "</pre></td><td><pre>".$baris[16];
+            echo "</pre></td><td><pre>".$baris[17];
             echo "</pre></td></tr>";
             
 
 $insert = "INSERT INTO insertmahasiswa 
 (nama_mahasiswa, nim, prodi_uuid, tanggal_daftar, periode, 
 Jenis_masuk, jk, Tempat_Lahir, Tanggal_Lahir, Agama, NIK, 
-negara, Kelurahan, ID_wilayah, ibu, Biaya_Masuk, nama_prodi, insertid) 
+negara, Kelurahan, ID_wilayah, ibu, Biaya_Masuk,nisn, id_jalur_daftar, nama_prodi, insertid) 
 VALUES 
 ('$nama', '$nim', '$id_prodi', '$tanggal_daftar', '$periode', 
 '$jenis_masuk', '$jenis_kelamin', '$tempat_lahir', '$tanggal_lahir', '$agama', '$nik', 
-'$negara', '$kelurahan', '$idwilayah', '$ibu', '$biaya', '$prodi', '$insertid');";
+'$negara', '$kelurahan', '$idwilayah', '$ibu', '$biaya','$nisn', '$id_jalur_daftar', '$prodi', '$insertid');";
 // // echo $insert;
 mysqli_query($db, $insert);
         }
@@ -352,21 +391,21 @@ else
 
 
 ?>
-    </div>
-                                        </div>
-
-                                    </section>
-
-                                   
-                                </div>
-    
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
+    </div>
 
-</div>  
+    </section>
+
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
 
 <!-- SIDEBAR -->
 

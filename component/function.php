@@ -11,13 +11,14 @@ if (is_array($key2)){
 foreach ($key2 as $key3){
 $nama = $key3['nama_mahasiswa']; $tempat_lahir = $key3['tempat_lahir'];
 $tanggal_lahir = $key3['tanggal_lahir']; $agama = $key3['nama_agama'];
-$ibu = $key3['nama_ibu_kandung']; $jk = $key3['jenis_kelamin'];
+$ibu = $key3['nama_ibu_kandung']; $jk = $key3['jenis_kelamin']; $nisn = $key3['nisn'];
 $respon =  "Nama   : $nama
 Tempat Lahir : $tempat_lahir
 Tanggal Lahir : $tanggal_lahir
 Jenis Kelamin : $jk
 Nama Ibu : $ibu
 Agama : $agama
+NISN : $nisn
 ";
 }} }} }}else {
 $respon = "</code>data idmhs tidak ditemukan</code>";
@@ -49,7 +50,8 @@ if (is_array($key2)){
 foreach ($key2 as $key3){
 $nim = $key3['nim']; $nama = $key3['nama_mahasiswa'];
 $jenis_daftar = $key3['nama_jenis_daftar']; $periode_masuk = $key3['nama_periode_masuk'];
-$tanggal_daftar = $key3['tanggal_daftar']; $keterangan_keluar = $key3['keterangan_keluar'];
+$tanggal_daftar = $key3['tanggal_daftar']; $jalur_daftar= $key3['id_jalur_daftar']; 
+$keterangan_keluar = $key3['keterangan_keluar'];
 $pt = $key3['nama_perguruan_tinggi']; $prodi = $key3['nama_program_studi'];
 $biaya_masuk = $key3['biaya_masuk'];
 $respon = "Nama   : $nama
@@ -58,7 +60,7 @@ Program Studi : $prodi
 Perguruan Tinggi : $pt
 Periode Masuk : $periode_masuk
 Tanggal Masuk : $tanggal_daftar
-Jenis Daftar : $tanggal_daftar
+Jalur Daftar : $jalur_daftar
 Jenis Keluar : $keterangan_keluar
 Biaya Masuk : $biaya_masuk
 ";

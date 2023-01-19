@@ -31,7 +31,7 @@ while($x = mysqli_fetch_array($hasil)){
 			 'id_kebutuhan_khusus_mahasiswa' => 0, 
 			 'id_kebutuhan_khusus_ayah' => 0,
 			 'id_kebutuhan_khusus_ibu' => 0,
-			 'nisn' => $x['Biaya_Masuk'],
+			 'nisn' => $x['nisn'],
 			 );
 			//  print_r($data);
 			 $act = "InsertBiodataMahasiswa";
@@ -65,6 +65,7 @@ while($x = mysqli_fetch_array($hasil)){
 					'id_jenis_daftar' 	=> $x['Jenis_masuk'], 
 					'tanggal_daftar' 	=> $x['tanggal_daftar'], 
 					'id_periode_masuk' 	=> $x['periode'], 
+					'id_jalur_daftar' 	=> $x['id_jalur_daftar'], 
                                         'biaya_masuk'   => $x['Biaya_Masuk'],
                                         'id_pembiayaan' => 1,
                                          'id_perguruan_tinggi' => $idpt
@@ -110,6 +111,7 @@ while($x = mysqli_fetch_array($hasil)){
 								'tanggal_daftar' 	=> $x['tanggal_daftar'], 
 								'id_periode_masuk' 	=> $x['periode'], 
 								'biaya_masuk'   => $x['Biaya_Masuk'],
+								'id_jalur_daftar' 	=> $x['id_jalur_daftar'], 
 								'id_pembiayaan' => 1,
 								'id_perguruan_tinggi' => $idpt
 								);
