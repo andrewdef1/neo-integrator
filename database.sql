@@ -544,6 +544,8 @@ CREATE TABLE IF NOT EXISTS `insertmahasiswa` (
   `ID_wilayah` int(11) DEFAULT NULL,
   `ibu` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   `Biaya_Masuk` int(11) DEFAULT NULL,
+  `nisn` varchar(20) DEFAULT NULL,
+  `Jalur_daftar` int(11) DEFAULT NULL,
   `STEP_1` varchar(6) CHARACTER SET utf8 DEFAULT NULL,
   `err_no` varchar(50) DEFAULT NULL,
   `err_desc` varchar(100) DEFAULT NULL,
